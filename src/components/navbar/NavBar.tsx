@@ -12,9 +12,7 @@ function NavBar(){
                <form >
                     <input type="text" placeholder='Busque um filme' />
                     <button type='submit'></button>
-               </form>
-
-               
+               </form>  
           </nav>
      );
 }
