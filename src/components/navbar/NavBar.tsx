@@ -7,11 +7,15 @@ function NavBar(){
      return(
           <nav id="navbar">
                <h2>
-                    <Link to="/">Find Movies</Link>
+                    <Link to="/">
+                        <BiCameraMovie />  Find Movies
+                    </Link>
                </h2>
                <form >
                     <input type="text" placeholder='Busque um filme' />
-                    <button type='submit'></button>
+                    <button type='submit'>
+                         <BiSearchAlt2 />
+                    </button>
                </form>  
           </nav>
      );

@@ -1,10 +1,43 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
+
+const baseURL = import.meta.env.VITE_API;
+const apikey = import.meta.env.VITE_API_KEY;
 
 
 function Home(){
+
+     const [bestMovies, setBestMovies] = useState([]);
+
+     async function getTheBestRankingMovies(){
+          try {
+               const response =  await axios.get(`${baseURL }/top_rated?${apikey}`);
+               
+               console.log(response.data);
+               response.data.results.forEach((movie: any) =>{
+                    console.log(movie.title);
+               });
+               setBestMovies(response.data.results);
+
+          } catch (error) {
+               console.log(error);
+          }
+     }
+
+     useEffect(()=>{
+          getTheBestRankingMovies();
+     }, [])
+
+
      return(
           <div className="home-container">
-               Home
+               <h2 className="title">Melhores filmes:</h2>
+               <div className="movie-container">
+                    {bestMovies.length === 0 && <p>Carregando...</p>}
+                    {bestMovies.length > 0 && bestMovies.map((movie: any)=>(
+                         <h2>{movie.title}</h2>
+                    ))}
+               </div>
           </div>
      );
 }
