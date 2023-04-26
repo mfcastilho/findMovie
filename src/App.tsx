@@ -10,6 +10,7 @@ function App() {
   return (
      <>
           <NavBar />
+          <h2>Find Movies</h2>
           <Outlet />    
      </>
   );

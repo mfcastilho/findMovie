@@ -1,0 +1,36 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+.home-container{
+     
+}
+
+main{
+     width: 100%;
+     max-width: 1440px;
+     
+     margin: 0 auto;
+     padding: 0 6rem;
+     background-color: #FAFAFA;
+}
+
+
+/*-- Dark Mode Classes --*/
+
+.main-dark-mode{
+     background-color: var(--dark-mode-elements);
+     background-color: var(--background-dark-mode);
+}
+
+
+
+/*-- Media Queries --*/
+
+@media (max-width: 575px){
+     main{
+          padding: 0 2rem;
+     }
+}
