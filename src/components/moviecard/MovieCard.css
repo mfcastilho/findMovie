@@ -1,0 +1,53 @@
+
+
+.moviecard-container{
+     width: 30%;
+     color: #FFF;
+     margin-bottom: 2.5rem;
+     background-color: #111;
+     display: flex;
+     justify-content: center;
+     padding: 2%;
+     border-radius: .1rem;
+     
+     
+}
+
+.moviecard-container div{
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+
+.moviecard-container div img{
+     width: 100%;
+     max-width: 100%;
+}
+
+.moviecard-container div img, 
+.moviecard-container div h2,
+.moviecard-container div p{
+     margin-bottom: 1rem;
+}
+
+.moviecard-container div svg{
+     color: #F7D354;
+}
+
+.moviecard-container div a{
+     background-color: #F7D354;
+     border: 2px solid #F7D354;
+     border-radius: 4px;
+     color: #000;
+     padding: 1rem .5rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: .4s;
+     font-weight: bold;
+}
+
+.moviecard-container div a:hover{
+     background-color: transparent;
+     color: #F7D354;
+}

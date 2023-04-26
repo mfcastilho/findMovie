@@ -6,7 +6,7 @@ import {
      BsFillFileEarmarkTextFill
 } from "react-icons/bs";
 import MovieCard from "../components/moviecard/MovieCard";
-// import "./Movie.css";
+import "./Movie.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { MovieInterface } from "../interfaces/MovieInterface";

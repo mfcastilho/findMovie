@@ -1,16 +1,10 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
-
-interface Movie {
-  id: number;
-  title: string;
-  poster_path: string;
-  vote_average: number;
-}
+import { MovieInterface } from "../../interfaces/MovieInterface";
+import "./MovieCard.css";
 
 interface Props {
-  movie: Movie;
+  movie: MovieInterface;
   showLink?: boolean;
 }
 
@@ -18,14 +12,16 @@ const imageURL = import.meta.env.VITE_IMG;
 
 function MovieCard({ movie, showLink = true }: Props) {
   return (
-    <div className="moviecard-container">
-      <img src={imageURL + movie.poster_path} alt={movie.title} />
-      <h2>{movie.title}</h2>
-      <p>
-        <FaStar /> {movie.vote_average}
-      </p>
-      {showLink && <Link to={`/movie/${movie.id}`}>Detalhes</Link>}
-    </div>
+     <div className="moviecard-container">
+          <div>
+               <img src={imageURL + movie.poster_path} alt={movie.title} />
+               <h2>{movie.title}</h2>
+               <p>
+                    <FaStar /> {movie.vote_average}
+               </p>
+               {showLink && <Link to={`/movie/${movie.id}`}>Detalhes</Link>}
+          </div>
+     </div>
   );
 }
 
