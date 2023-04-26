@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
 import { FaStar} from "react-icons/fa";
+import MovieCard from '../components/moviecard/MovieCard';
 
 const baseURL = import.meta.env.VITE_API;
 const apikey = import.meta.env.VITE_API_KEY;
@@ -41,14 +42,15 @@ function Home(){
           </div>
                     {bestMovies.length === 0 && <p>Carregando...</p>}
                     {bestMovies.length > 0 && bestMovies.map((movie: any)=>(
-                         <div>
-                         <img src={imageURL + movie.poster_path} alt={movie.title} />
-                         <h2>{movie.title}</h2>
-                         <p>
-                              <FaStar /> {movie.vote_average}
-                         </p>
-                         <Link to={`/movie/${movie.id}`}>Detalhes</Link>
-                    </div>
+                         // <div>
+                         //      <img src={imageURL + movie.poster_path} alt={movie.title} />
+                         //      <h2>{movie.title}</h2>
+                         //      <p>
+                         //           <FaStar /> {movie.vote_average}
+                         //      </p>
+                         //      <Link to={`/movie/${movie.id}`}>Detalhes</Link>
+                         // </div>
+                         <MovieCard key={movie.id} movie={movie} />
                     ))}
                </div>
           </div>
