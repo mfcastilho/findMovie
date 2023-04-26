@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import "./MoviesGrid.css";
 import MovieCard from "../components/moviecard/MovieCard";
 import { useSearchParams } from 'react-router-dom';
@@ -13,7 +13,7 @@ function Search(){
      const [searchParams] = useSearchParams();
 
      const [movies, setMovies] = useState([]);
-     const query = searchParams.get("q");
+     const query: string | null = searchParams.get("q");
 
 
      async function getSearchMovies(){
