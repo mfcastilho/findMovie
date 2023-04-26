@@ -5,7 +5,9 @@ import {
      BsHourglassSplit,
      BsFillFileEarmarkTextFill
 } from "react-icons/bs";
+import { FaStar } from "react-icons/fa";
 import MovieCard from "../components/moviecard/MovieCard";
+import MovieDetails from "../components/movieDetails/MovieDetails";
 import "./Movie.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -13,6 +15,7 @@ import { MovieInterface } from "../interfaces/MovieInterface";
 
 const baseURL = import.meta.env.VITE_API;
 const apikey = import.meta.env.VITE_API_KEY;
+const imageURL = import.meta.env.VITE_IMG;
 
 function Movie(){
 
@@ -23,13 +26,25 @@ function Movie(){
           try {
                const response =  await axios.get<MovieInterface>(`${baseURL }/${id}?${apikey}`); // define o tipo da resposta como Movie
 
-               console.log(response.data.original_title);
+               console.log(response.data);
                setMovie(response.data);
 
           } catch (error) {
                console.log(error);
           }
      }
+
+     // function insertBackgroundImageInThePage(){
+          
+     //      const moviePage: HTMLElement | null = document.querySelector(".movie-page");
+
+     //      if(moviePage && movie){
+     //           moviePage.style.backgroundImage = `url(${imageURL}${movie.poster_path})`;
+     //           moviePage.style.backgroundSize = "cover";  
+     //           moviePage.style.opacity = ".9";   
+     //      }
+
+     // }
 
      function formatCurrency(number:number){
           return number.toLocaleString("en-US", {
@@ -40,14 +55,21 @@ function Movie(){
 
      useEffect(()=>{
           showMovie();
+          // insertBackgroundImageInThePage();
      }, []);
 
      return(
           <div className="movie-page">
                {movie && <>
-                    <MovieCard movie={movie} showLink={false} />
+                    {/* <MovieCard movie={movie} showLink={false} /> */}
+                    <MovieDetails movie={movie} />
                     <div className="infos-container">
-                         <p className="tagline">{movie.tagline}</p>
+                         <h1>{movie.title}</h1>
+                         <div className="wrapper-elements">
+                              <p><FaStar /></p>
+                              <div>{movie.vote_average}</div>
+                         </div>
+                         <p className="tagline">{`"${movie.tagline}"`}</p>
                          <div className="info">
                               <h3>
                                    <BsWallet2 /> Orçamento:

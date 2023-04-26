@@ -1,10 +1,10 @@
 
 
-.moviecard-container{
-     width: 30%;
+.moviedetails-container{
+     width: 40%;
      color: #FFF;
      margin-bottom: 2.5rem;
-     background-color: #000;
+     background-color: #111;
      display: flex;
      justify-content: center;
      padding: 2%;
@@ -13,29 +13,29 @@
      
 }
 
-.moviecard-container div{
+.moviedetails-container div{
      display: flex;
      flex-direction: column;
      justify-content: space-between;
 }
 
-.moviecard-container div img{
+.moviedetails-container div img{
      width: 100%;
      max-width: 100%;
-     border: .5px solid gray;
+     border: .5px solid rgb(75, 73, 73);
 }
 
-.moviecard-container div img, 
-.moviecard-container div h2,
-.moviecard-container div p{
+.moviedetails-container div img, 
+.moviedetails-container div h2,
+.moviedetails-container div p{
      margin-bottom: 1rem;
 }
 
-.moviecard-container div svg{
+.moviedetails-container div svg{
      color: #F7D354;
 }
 
-.moviecard-container div a{
+.moviedetails-container div a{
      background-color: #ff5e00;
      border: 2px solid #ff5e00;
      border-radius: 4px;
@@ -48,7 +48,7 @@
      font-weight: bold;
 }
 
-.moviecard-container div a:hover{
+.moviedetails-container div a:hover{
      background-color: transparent;
      color: #ff5e00;
 }

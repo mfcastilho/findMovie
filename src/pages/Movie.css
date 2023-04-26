@@ -1,14 +1,28 @@
 .movie-page{
      color: #FFF;
      display: flex;
-     flex-direction: column;
+     gap: 1.5rem;
+     /* flex-direction: column; */
      align-items: center;
-     margin: 2rem auto;
+     margin: 2rem auto;  
 }
 
+.infos-container{
+     width: 60%;
+}
+
+.wrapper-elements{
+     display: flex;
+     align-items: center;
+}
+
+
+.wrapper-elements p svg{
+     color: #F7D354;
+}
 .movie-page svg{
      font-size: 1.5rem;
-     color: #F7D354;
+     color: #ff5e00;
 }
 
 .movie-page .moviecard-container{
@@ -33,7 +47,7 @@
 }
 
 .tagline{
-     text-align: center;
+     /* text-align: center; */
      font-size: 1.3rem;
      margin-bottom: 2rem;
 }
