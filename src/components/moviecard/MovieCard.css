@@ -52,3 +52,22 @@
      background-color: transparent;
      color: #ff5e00;
 }
+
+
+
+/* -- MEDIA QUERIES --*/
+
+@media (max-width: 768px){
+
+     .moviecard-container{
+          width: 47%;
+      
+     }
+}
+
+@media (max-width: 480px){
+
+     .moviecard-container{
+          width: 100%;
+     }
+}

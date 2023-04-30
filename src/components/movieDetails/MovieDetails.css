@@ -13,13 +13,9 @@
      
 }
 
-.moviedetails-container div{
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-}
 
-.moviedetails-container div img{
+
+.moviedetails-container img{
      width: 100%;
      max-width: 100%;
      border: .5px solid rgb(75, 73, 73);
@@ -51,4 +47,69 @@
 .moviedetails-container div a:hover{
      background-color: transparent;
      color: #ff5e00;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* -- MEDIA QUERIES --*/
+
+@media (max-width: 1250px){
+
+     .moviedetails-container{
+          width: 50%;    
+     }
+
+     .moviedetails-container div{
+          width: 100%;
+     }
+
+     .moviedetails-container div img{
+          width: 100%;
+     }
+  
+}
+
+@media (max-width: 1080px){
+
+     .moviedetails-container{
+          width: 60%;    
+     }
+  
+}
+
+@media (max-width: 960px){
+     .moviedetails-container{
+          width: 100%; 
+          
+     }
+
+     .moviedetails-container img{
+          width: 80%;
+          max-width: 80%;
+     }
+
+}
+
+
+@media (max-width: 568px){
+
+     .moviedetails-container{
+          /* display: block; */
+    }
+     .moviedetails-container div img{
+           width: 80%;
+     }
+    
+}
+@media (max-width: 480px){
+     
+     
 }

@@ -6,7 +6,6 @@ import {
      BsFillFileEarmarkTextFill
 } from "react-icons/bs";
 import { FaStar } from "react-icons/fa";
-import MovieCard from "../components/moviecard/MovieCard";
 import MovieDetails from "../components/movieDetails/MovieDetails";
 import "./Movie.css";
 import { useState, useEffect } from "react";
@@ -15,7 +14,7 @@ import { MovieInterface } from "../interfaces/MovieInterface";
 
 const baseURL = import.meta.env.VITE_API;
 const apikey = import.meta.env.VITE_API_KEY;
-const imageURL = import.meta.env.VITE_IMG;
+
 
 function Movie(){
 

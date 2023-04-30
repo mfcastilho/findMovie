@@ -39,3 +39,25 @@
      background-color: transparent;
      color: #ff5e00;
 }
+
+
+
+
+/* -- MEDIA QUERIES --*/
+
+@media (max-width: 480px){
+     #navbar{
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
+     }
+
+     #navbar form{
+          width: 80%;
+     }
+     
+     #navbar input{
+          width: 100%;
+     }
+     
+}

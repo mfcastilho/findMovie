@@ -1,4 +1,3 @@
-import { FaStar } from "react-icons/fa";
 import { MovieInterface } from "../../interfaces/MovieInterface";
 import "./MovieDetails.css";
 
