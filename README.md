@@ -4,10 +4,7 @@
 
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/72894980/193053973-bef8938a-5591-4b8e-a5d4-95d257421b7b.png" width=350 heigth=300 />
-<img src="https://user-images.githubusercontent.com/72894980/193054026-1cff7e66-0133-48b8-866d-29dc8fe5e389.png" width=350 heigth=300 />
-<img src="https://user-images.githubusercontent.com/72894980/193054114-c527f1e0-c49b-4e96-936a-4d28ab7fa73e.png" width=350 heigth=300 />
-<img src="https://user-images.githubusercontent.com/72894980/193054186-f1d21098-f758-431f-9017-aee3542fd01b.png" width=350 heigth=300 />
+![pagina-home](https://github.com/mfcastilho/findMovie/blob/master/screencast-bpconcjcammlapcogcnnelfmaeghhagj-2023.04.30-17_58_05.gif)
 
 </div>
 
