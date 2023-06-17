@@ -11,6 +11,7 @@ import "./Movie.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { MovieInterface } from "../interfaces/MovieInterface";
+import { motion } from "framer-motion";
 
 const baseURL = import.meta.env.VITE_API;
 const apikey = import.meta.env.VITE_API_KEY;
@@ -62,41 +63,52 @@ function Movie(){
                {movie && <>
                     {/* <MovieCard movie={movie} showLink={false} /> */}
                     <MovieDetails movie={movie} />
-                    <div className="infos-container">
-                         <h1>{movie.title}</h1>
-                         <div className="wrapper-elements">
-                              <p><FaStar /></p>
-                              <div>{movie.vote_average}</div>
-                         </div>
-                         <p className="tagline">{`"${movie.tagline}"`}</p>
-                         <div className="info">
-                              <h3>
-                                   <BsWallet2 /> Orçamento:
-                              </h3>
-                              <p>{formatCurrency(movie.budget)}</p>
-                         </div>
+                    <motion.div 
+                              initial="hidden"
+                              whileInView="visible"
+                              viewport={{ once: true, amount: 0.5 }}
+                              transition={{ delay: 0.2, duration: 0.5 }}
+                              variants={{
+                              hidden: { opacity: 0, x: 100 },
+                              visible: { opacity: 1, x: 0 },
+                         }}
+                    >
+                         <div className="infos-container">
+                              <h1>{movie.title}</h1>
+                              <div className="wrapper-elements">
+                                   <p><FaStar /></p>
+                                   <div>{movie.vote_average}</div>
+                              </div>
+                              <p className="tagline">{`"${movie.tagline}"`}</p>
+                              <div className="info">
+                                   <h3>
+                                        <BsWallet2 /> Orçamento:
+                                   </h3>
+                                   <p>{formatCurrency(movie.budget)}</p>
+                              </div>
 
-                         <div className="info">
-                              <h3>
-                                   <BsGraphUp /> Receita:
-                              </h3>
-                              <p>{formatCurrency(movie.revenue)}</p>
-                         </div>
+                              <div className="info">
+                                   <h3>
+                                        <BsGraphUp /> Receita:
+                                   </h3>
+                                   <p>{formatCurrency(movie.revenue)}</p>
+                              </div>
 
-                         <div className="info">
-                              <h3>
-                                   <BsHourglassSplit /> Duração:
-                              </h3>
-                              <p>{movie.runtime} minutos</p>
-                         </div>
+                              <div className="info">
+                                   <h3>
+                                        <BsHourglassSplit /> Duração:
+                                   </h3>
+                                   <p>{movie.runtime} minutos</p>
+                              </div>
 
-                         <div className="info description">
-                              <h3>
-                                   <BsFillFileEarmarkTextFill /> Descrição:
-                              </h3>
-                              <p>{movie.overview}</p>
+                              <div className="info description">
+                                   <h3>
+                                        <BsFillFileEarmarkTextFill /> Descrição:
+                                   </h3>
+                                   <p>{movie.overview}</p>
+                              </div>
                          </div>
-                    </div>
+                    </motion.div>  
                </>}
           </div>
      );

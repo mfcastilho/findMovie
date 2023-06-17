@@ -27,6 +27,12 @@
      margin-bottom: 1rem;
 }
 
+/* .moviedetails-container div{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+} */
+
 .moviedetails-container div svg{
      color: #F7D354;
 }
@@ -91,6 +97,11 @@
           
      }
 
+     .moviedetails-container div{
+          display: flex;
+          justify-content: center;
+          }
+
      .moviedetails-container img{
           width: 80%;
           max-width: 80%;
@@ -102,8 +113,11 @@
 @media (max-width: 568px){
 
      .moviedetails-container{
-          /* display: block; */
+          display: flex;
+          justify-content: center;
     }
+
+    
      .moviedetails-container div img{
            width: 80%;
      }
