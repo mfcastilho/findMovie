@@ -28,5 +28,5 @@ E clicando em um filme específico você pode ter informações mais detalhadas,
 ## A criação de todo o site foi em React.JS.
 ## Navegação de rotas com o react-router-dom
 
-
+- Deploy: https://finding-movies.netlify.app/
 
