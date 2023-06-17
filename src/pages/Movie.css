@@ -1,3 +1,34 @@
+
+.movie-page-container{
+     display: flex;
+     flex-direction: column;
+}
+
+.movie-page-container button{
+     width: 8rem;
+     height: 6vh;
+
+     border-radius: .6rem;
+     margin-left: 2rem;
+     margin-top: 2%;
+
+
+}
+
+.back-btn{
+     font-size: 1.2rem;
+     background-color: #ff5e00;
+     color: #FFF;
+     border: none;
+
+     transition: .6s all;
+}
+
+.back-btn:hover{
+     background-color: #c44a04;
+     cursor: pointer;
+}
+
 .movie-page{
      color: #FFF;
      display: flex;

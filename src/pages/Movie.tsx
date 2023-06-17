@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import {
      BsGraphUp,
      BsWallet2,
@@ -13,6 +13,7 @@ import axios from "axios";
 import { MovieInterface } from "../interfaces/MovieInterface";
 import { motion } from "framer-motion";
 
+
 const baseURL = import.meta.env.VITE_API;
 const apikey = import.meta.env.VITE_API_KEY;
 
@@ -21,6 +22,7 @@ function Movie(){
 
      const {id} = useParams();
      const [movie, setMovie] = useState<MovieInterface | null>(null); // define o tipo de movie como Movie | null
+     const navigate = useNavigate();
 
      async function showMovie(){
           try {
@@ -53,13 +55,20 @@ function Movie(){
           });
      }
 
+     function backButton(){
+          navigate("/");
+     }
+
      useEffect(()=>{
           showMovie();
           // insertBackgroundImageInThePage();
      }, []);
 
      return(
-          <div className="movie-page">
+          <div className="movie-page-container">
+               <button onClick={backButton} className="back-btn">Voltar</button>
+               <div className="movie-page">
+               
                {movie && <>
                     {/* <MovieCard movie={movie} showLink={false} /> */}
                     <MovieDetails movie={movie} />
@@ -111,6 +120,8 @@ function Movie(){
                     </motion.div>  
                </>}
           </div>
+          </div>
+          
      );
 }
 
